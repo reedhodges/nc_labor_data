@@ -1,7 +1,7 @@
 library(ggplot2)
 library(dplyr)
 
-data <- read.csv("/Users/reedhodges/Documents/GitHub/nc_labor_data/qcew_data/DETAILQCEW.csv")
+data <- read.csv("/Users/reedhodges/Documents/GitHub/nc_labor_data/qcew_data/data_annual.csv")
 
 data$Year <- as.numeric(as.character(data$Year))
 
@@ -25,6 +25,6 @@ ggplot(combined_data, aes(x = Year, y = Percent_of_Max, color = Industry)) +
   theme_minimal() + 
   scale_y_continuous(labels = scales::percent_format()) +
   labs(title = "Average Annual Employment as Percentage of Industry Maximum",
-       subtitle = "Comparing Information vs. Manufacturing Industries",
+       subtitle = "Comparing Information vs. Manufacturing Industries in North Carolina",
        x = "Year",
        y = "% of Industry's Maximum Employment")
