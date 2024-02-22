@@ -4,7 +4,7 @@ library(dplyr)
 data <- read.csv("/Users/reedhodges/Documents/GitHub/nc_labor_data/qcew_data/data_quarterly.csv")
 
 # NAICS Code 11 (Agriculture, Forestry, Fishing, and Hunting)
-industry_data <- filter(data, NAICS.Code == 11)
+industry_data <- filter(data, NAICS.Code == 11, Ownership == "Private")
 
 industry_data$Quarter <- as.factor(industry_data$Quarter)
 

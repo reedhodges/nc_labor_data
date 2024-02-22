@@ -24,5 +24,5 @@ ggplot(data_clean, aes(x = Ownership, y = Average.Weekly.Wage, fill = Ownership)
   theme_minimal() +
   labs(title = "Comparison of Average Weekly Wages by Ownership Type",
        x = "Ownership Type",
-       y = "Average Weekly Wage") +
+       y = "Average Weekly Wage ($)") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
